@@ -5,11 +5,13 @@ import GoalForm from "./components/GoalForm";
 import ActiveGoals from "./components/ActiveGoals";
 import CompletedGoals from "./components/CompletedGoals";
 
+
 function App() {
   const [goals, setGoals] = useState([]);
 
+  const API_URL = "https://smart-goal-planner-v2.onrender.com/goals";
   useEffect(() => {
-    fetch("http://localhost:3001/goals")
+    fetch(API_URL)
       .then((response) => response.json())
       .then((data) => setGoals(data))
       .catch((error) => console.error("Error fetching goals:", error));

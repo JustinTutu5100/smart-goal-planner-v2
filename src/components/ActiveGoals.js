@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function ActiveGoals({ goals = [], onDeposit, onEdit, onDelete }) {
 
   // Same helper to compute status & days left

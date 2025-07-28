@@ -1,7 +1,7 @@
 import React from "react";
 
 function CompletedGoals({ goals = [], onDeposit, onEdit, onDelete }) {
-  // Helper to compute days left and status
+  
   const getGoalStatus = (goal) => {
     const daysLeft = Math.max(
       0,
